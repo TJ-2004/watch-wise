@@ -37,6 +37,8 @@ const Header = () => {
   return (
     <div className="sticky top-0 flex flex-row justify-between items-center z-10  h-14 px-4 md:px-5 bg-white dark:bg-black">
       {loading && <Loader />}
+
+
       <div className="flex h-5 items-center">
         {pageName !== "video" && (
           <div
@@ -59,6 +61,8 @@ const Header = () => {
           <img className="h-full md:hidden " src={ytMobile} alt="youtube" />
         </Link>
       </div>
+
+
       <div className="group flex items-center">
         <div className="flex h-8 md:h-10 md:ml-10 md:pl-5 border border-[#303030] rounded-l-3xl group-focus-within:border-blue-500 md:group-focus-within:ml-5 md:group-focus-within:pl-0">
           <div className="w-10 items-center justify-center hidden group-focus-within:md:flex">
@@ -80,6 +84,8 @@ const Header = () => {
           <IoIosSearch className="text-white text-xl" />
         </button>
       </div>
+
+
       <div className="flex items-center ">
         <div className="hidden md:flex">
           <div className="flex items-center justify-center h-10 w-10 rounded-full hover:bg-[#303030]/[0.6]">
@@ -93,6 +99,8 @@ const Header = () => {
           </div>
         </div>
       </div>
+
+
     </div>
   );
 };
