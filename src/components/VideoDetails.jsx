@@ -25,7 +25,7 @@ const VideoDetails = () => {
   const fetchVideoDetails = () => {
     setLoading(true);
     fetchdatafromapi(`video/details/?id=${id}`).then((res) => {
-      console.log(res);
+      // console.log(res);
       setVideo(res);
       setLoading(false);
     });
@@ -34,17 +34,17 @@ const VideoDetails = () => {
   const fetchRelatedVideos = () => {
     setLoading(true);
     fetchdatafromapi(`video/related-contents/?id=${id}`).then((res) => {
-      console.log(res);
+      // console.log(res);
       setRelatedVideos(res);
       setLoading(false);
     });
   };
 
   return (
-    <div className="flex justify-center flex-row h-[910px] bg-black">
-      <div className="w-full max-w-[1280px] flex flex-col lg:flex-row">
-        <div className="flex flex-col lg:w-[calc(100%-350px)] xl:w-[calc(100%-400px)] px-4 py-3 lg:py-6 overflow-y-auto">
-          <div className="h-[200px] md:h-[400px] lg:h-[400px] xl:h-[550px] ml-[-16px] lg:ml-0 mr-[-16px] lg:mr-0">
+    <div className="flex justify-center flex-row h-[calc(100%-56px)] bg-black">
+            <div className="w-full max-w-[1280px] flex flex-col lg:flex-row">
+                <div className="flex flex-col lg:w-[calc(100%-350px)] xl:w-[calc(100%-400px)] px-4 py-3 lg:py-6 overflow-y-auto">
+                    <div className="h-[200px] md:h-[400px] lg:h-[400px] xl:h-[550px] ml-[-16px] lg:ml-0 mr-[-16px] lg:mr-0">
             <ReactPlayer
               url={`https://www.youtube.com/watch?v=${id}`}
               controls
@@ -65,6 +65,7 @@ const VideoDetails = () => {
                   <img
                     src={video?.author?.avatar[0]?.url}
                     className="h-full w-full object-cover"
+                    alt="jnvf"
                   />
                 </div>
               </div>

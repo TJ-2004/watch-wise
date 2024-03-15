@@ -11,7 +11,6 @@ import { AppContext } from "./context/contextApi";
 const App = () => {
   return (
     <AppContext>
-      <div>
         <BrowserRouter>
           <div className="flex flex-col h-full">
             <Header />
@@ -22,7 +21,6 @@ const App = () => {
             </Routes>
           </div>
         </BrowserRouter>
-      </div>
     </AppContext>
   );
 };
